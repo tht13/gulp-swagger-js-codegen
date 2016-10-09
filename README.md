@@ -44,6 +44,7 @@ Define out put type in the options argument
 ``` javascript
 options = {
   type: "tyescript" | "node | "angular",
+  filename: string, # Output file name
   swagger: {
     # swagger-js-codegen options
   }

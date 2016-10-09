@@ -36,21 +36,25 @@ module.exports = function (options) {
 
       options.swaggerOptions.swagger = json;
       var output;
+      var fileName;
       switch (options.type) {
         case "typescript":
           output = CodeGen.getTypescriptCode(options.swaggerOptions);
+          fileName = "api.ts";
           break;
         case "node":
           output = CodeGen.getNodeCode(options.swaggerOptions);
+          fileName = "api.js";
           break;
         case "angular":
           output = CodeGen.getAngularCode(options.swaggerOptions);
+          fileName = "api.js";
           break;
       }
 
       var newFile = file.clone();
       newFile.contents = new Buffer(output);
-      newFile.path = './definitions.d.ts';
+      newFile.path = './' + (options.name || fileName)
       callback(null, newFile);
     }
   });
