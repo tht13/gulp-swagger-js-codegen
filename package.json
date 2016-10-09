@@ -1,0 +1,38 @@
+{
+  "name": "gulp-swagger-js-codegen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tht13/gulp-swagger-js-codegen.git"
+  },
+  "keywords": [
+    "gulp",
+    "gulp-plugin",
+    "swagger-js-codegen",
+    "swagger"
+  ],
+  "author": "Thomas Haakon Townsend",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tht13/gulp-swagger-js-codegen/issues"
+  },
+  "homepage": "https://github.com/tht13/gulp-swagger-js-codegen#readme",
+  "dependencies": {
+    "gulp-util": "^3.0.7",
+    "js-yaml": "^3.6.1",
+    "object.defaults": "^0.3.0",
+    "swagger-js-codegen": "^1.6.9",
+    "through2": "^2.0.1"
+  },
+  "devDependencies": {
+    "event-stream": "^3.3.4",
+    "fs-extra-promise": "^0.4.1",
+    "mocha": "^3.1.0",
+    "vinyl": "^2.0.0"
+  }
+}
