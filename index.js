@@ -42,6 +42,10 @@ module.exports = function (options) {
           output = CodeGen.getTypescriptCode(options.swaggerOptions);
           fileName = "api.ts";
           break;
+        case "typescript-def":
+          output = CodeGen.getTypescriptDefinitions(options.swaggerOptions);
+          fileName = "definitions.d.ts";
+          break;
         case "node":
           output = CodeGen.getNodeCode(options.swaggerOptions);
           fileName = "api.js";
