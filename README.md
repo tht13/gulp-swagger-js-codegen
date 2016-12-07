@@ -12,7 +12,6 @@ Local file example
 
 const gulp = require("gulp");
 const swagger = require("gulp-swagger-js-codegen");
-const download = require("gulp-download");
 
 gulp.task("swagger", () => {
   return gulp.src("example.yaml")
@@ -28,6 +27,7 @@ Download example
 
 const gulp = require("gulp");
 const swagger = require("gulp-swagger-js-codegen");
+const download = require("gulp-download");
 
 gulp.task("swagger", () => {
   return download("http://example.com/example.yaml")
@@ -43,9 +43,9 @@ Define out put type in the options argument
 
 ``` javascript
 options = {
-  type: "tyescript" | "node | "angular",
-  filename: string, # Output file name
-  swagger: {
+  type: "tyescript" | "node" | "angular",
+  name: string, # Output file name
+  swaggerOptions: {
     # swagger-js-codegen options
   }
 }
