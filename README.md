@@ -8,8 +8,7 @@ Either YAML or JSON can be piped
 
 Local file example
 
-``` javascript
-
+```js
 const gulp = require("gulp");
 const swagger = require("gulp-swagger-js-codegen");
 
@@ -18,13 +17,11 @@ gulp.task("swagger", () => {
     .pipe(swagger())
     .pipe(gulp.dest("./"));
 });
-
 ```
 
 Download example
 
-``` javascript
-
+```js
 const gulp = require("gulp");
 const swagger = require("gulp-swagger-js-codegen");
 const download = require("gulp-download");
@@ -34,14 +31,13 @@ gulp.task("swagger", () => {
     .pipe(swagger())
     .pipe(gulp.dest("./"));
 });
-
 ```
 
 ## Options
 
 Define out put type in the options argument
 
-``` javascript
+```js
 options = {
   type: "tyescript" | "node" | "angular",
   name: string, # Output file name
@@ -51,5 +47,4 @@ options = {
 }
 
 swagger(options)
-
 ```
